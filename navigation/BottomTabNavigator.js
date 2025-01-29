@@ -1,21 +1,12 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-// Création des écrans
-const HomeScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Accueil</Text>
-  </View>
-);
-
-const ProfileScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Profil</Text>
-  </View>
-);
+// Importation des différents écrans
+import HomeScreen from '../screens/HomeScreen';
+import TrainingScreen from '../screens/TrainingScreen';
+import NutritionScreen from '../screens/NutritionScreen';
 
 // Création du bottom tab navigator
 const Tab = createBottomTabNavigator();
@@ -26,7 +17,16 @@ export default function BottomTabNavigator() {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
-            let iconName = route.name === 'Accueil' ? 'home' : 'person';
+            if (route.name === 'Accueil'){
+              var iconName = 'home';
+            }
+            else if (route.name === 'Entrainement'){
+              var iconName = 'barbell';
+            }
+            else {
+              var iconName = 'beer-outline';
+            }
+            
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: 'blue',
@@ -34,7 +34,8 @@ export default function BottomTabNavigator() {
         })}
       >
         <Tab.Screen name="Accueil" component={HomeScreen} />
-        <Tab.Screen name="Profil" component={ProfileScreen} />
+        <Tab.Screen name="Entrainement" component={TrainingScreen} />
+        <Tab.Screen name="Nutrition" component={NutritionScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
