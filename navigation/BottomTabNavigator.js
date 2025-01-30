@@ -1,9 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
-// Importation des différents écrans
+// Importation des écrans
 import HomeScreen from '../screens/PartieAcceuil/HomeScreen';
 import TrainingScreen from '../screens/PartieEntrainement/TrainingScreen';
 import NutritionScreen from '../screens/PartieNutrition/NutritionScreen';
@@ -13,30 +12,24 @@ const Tab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ color, size }) => {
-            if (route.name === 'Accueil'){
-              var iconName = 'home';
-            }
-            else if (route.name === 'Entrainement'){
-              var iconName = 'barbell';
-            }
-            else {
-              var iconName = 'beer-outline';
-            }
-            
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-          tabBarActiveTintColor: 'blue',
-          tabBarInactiveTintColor: 'gray',
-        })}
-      >
-        <Tab.Screen name="Accueil" component={HomeScreen} />
-        <Tab.Screen name="Entrainement" component={TrainingScreen} />
-        <Tab.Screen name="Nutrition" component={NutritionScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+          if (route.name === 'Accueil') iconName = 'home';
+          else if (route.name === 'Entrainement') iconName = 'barbell';
+          else iconName = 'beer-outline';
+
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+        tabBarActiveTintColor: 'blue',
+        tabBarInactiveTintColor: 'gray',
+      })}
+    >
+      <Tab.Screen name="Accueil" component={HomeScreen} />
+      <Tab.Screen name="Entrainement" component={TrainingScreen} />
+      <Tab.Screen name="Nutrition" component={NutritionScreen} />
+    </Tab.Navigator>
   );
 }
+

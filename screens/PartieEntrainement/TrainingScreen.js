@@ -22,6 +22,7 @@ const TrainingScreen = () => {
 
   // Fonction pour naviguer vers SportSelection
   const navigateToSportSelection = () => {
+    console.log(navigation.getState());
     navigation.navigate('ChoixSport'); // Utilisation de la méthode navigate pour aller à la page SportSelection
   };
 

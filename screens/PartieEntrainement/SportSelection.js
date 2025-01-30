@@ -39,34 +39,7 @@ const SelectionDeSport = ({ navigation }) => {
   );
 };
 
-// Page de destination après la sélection
-const AnotherScreen = () => (
-  <View style={styles.container}>
-    <Text>Vous êtes maintenant sur une autre page !</Text>
-  </View>
-);
-
-// Configuration du Stack Navigator local
-const Stack = createStackNavigator();
-
-const SportSelectionWithNav = () => (
-  <NavigationContainer>
-    <Stack.Navigator initialRouteName="SportSelection">
-      <Stack.Screen
-        name="SportSelection"
-        component={SportSelection}
-        options={{ title: 'Sélection du Sport' }}
-      />
-      <Stack.Screen
-        name="AnotherScreen"
-        component={AnotherScreen}
-        options={{ title: 'Autre Page' }}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
-
-export default SportSelectionWithNav;
+export default SelectionDeSport;
 
 // Styles
 const styles = StyleSheet.create({
@@ -87,3 +60,4 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
 });
+
