@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
 // Importation des différents écrans
-import HomeScreen from '../screens/HomeScreen';
-import TrainingScreen from '../screens/TrainingScreen';
-import NutritionScreen from '../screens/NutritionScreen';
+import HomeScreen from '../screens/PartieAcceuil/HomeScreen';
+import TrainingScreen from '../screens/PartieEntrainement/TrainingScreen';
+import NutritionScreen from '../screens/PartieNutrition/NutritionScreen';
 
 // Création du bottom tab navigator
 const Tab = createBottomTabNavigator();
