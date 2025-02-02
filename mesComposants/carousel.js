@@ -1,11 +1,17 @@
-import * as React from 'react';
-import { Dimensions, Text, View } from 'react-native';
+import { Dimensions, Text, View, Image} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 
+import React, { useState } from 'react';
 
 
 
 var listeRecettes = ["Smoothie protéiné", "Gateau protéiné", "barres de céréales", "Curry"]
+const [images, setimages] = [
+  require('@/assets/smoothie.png'),
+  require('@/assets/cake.png'),
+  require('@/assets/curry.png'),
+  require('@/assets/favicon.png'),
+]; 
 
 
 function Index() {
@@ -30,7 +36,8 @@ function Index() {
                     >
                         <Text style={{ textAlign: 'center', fontSize: 30 }}>
                           {listeRecettes[index]}
-                              
+                          {images[index]}   
+                          <Image source={ require('@/assets/smoothie.png') } />
                         </Text>
                     </View>
                 )}

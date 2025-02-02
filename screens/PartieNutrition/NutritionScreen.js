@@ -19,10 +19,9 @@ const NutritionScreen = () => (
       <Text>Objectifs Nutrionnels: </Text>
     </View>
     <View style={styles.container} onClick={() => console.log("onclick..") } >
-      <Text>Objectifs Nutrionnels: </Text>
+      <Text>Recettes de la semaine: </Text>
     </View>
       <View>
-      <Text>Recettes recommandées:</Text>
       <Index/>
     </View>  
 
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#bbbbbb',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop : 800
+    paddingTop : 200
   },
   container: {
     backgroundColor: '#fff',
