@@ -6,11 +6,11 @@ import React, { useState } from 'react';
 
 
 var listeRecettes = ["Smoothie protéiné", "Gateau protéiné", "barres de céréales", "Curry"]
-const [images, setimages] = [
+const images = [
   require('@/assets/smoothie.png'),
   require('@/assets/cake.png'),
   require('@/assets/curry.png'),
-  require('@/assets/favicon.png'),
+  require('@/assets/barresCer.png'),
 ]; 
 
 
@@ -21,7 +21,7 @@ function Index() {
             <Carousel
                 loop
                 width={width}
-                height={width / 2}
+                height={width/1.5 }
                 autoPlay={true}
                 data={listeRecettes}
                 scrollAnimationDuration={1000}
@@ -34,10 +34,8 @@ function Index() {
                             justifyContent: 'center',
                         }}
                     >
-                        <Text style={{ textAlign: 'center', fontSize: 30 }}>
-                          {listeRecettes[index]}
-                          {images[index]}   
-                          <Image source={ require('@/assets/smoothie.png') } />
+                        <Text style={{ textAlign: 'center', fontSize: 10 }}>
+                          <Image source={ images[index] } />
                         </Text>
                     </View>
                 )}

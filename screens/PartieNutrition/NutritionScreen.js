@@ -13,10 +13,10 @@ const NutritionScreen = () => (
     <Text>Cette page sera dédiée à la nutrition</Text>
     <View style={styles.macroObjectifsCont} onClick={() => console.log("onclick..") } >
 
-      <Text>Objectifs Nutrionnels: </Text>
+      <Text>A supprimer , il faut juste décaler la position du view en dessous </Text>
     </View>
     <View style={styles.container} onClick={() => console.log("onclick..") } >
-      <Text>Objectifs Nutrionnels: </Text>
+      <Text>Objectifs de Macros:  </Text>
     </View>
     <View style={styles.container} onClick={() => console.log("onclick..") } >
       <Text>Recettes de la semaine: </Text>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#bbbbbb',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop : 200
+    paddingTop : 150
   },
   container: {
     backgroundColor: '#fff',
