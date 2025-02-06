@@ -4,7 +4,7 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
 import Index from "../../mesComposants/carousel.js"
-
+import MealPlanScreen from "./MealPlans.js"
 //Gérer l'écran de Nutrition
 
 
@@ -20,6 +20,7 @@ const NutritionScreen = () => (
     <View style={styles.container} onClick={() => console.log("onclick..") } >
       <Text>Objectifs de Macros:  </Text>
     </View>
+    <MealPlanScreen />
     <View style={styles.container} onClick={() => console.log("onclick..") } >
       <Text>Recettes de la semaine: </Text>
     </View>
@@ -39,10 +40,10 @@ export default NutritionScreen;
 
 const styles = StyleSheet.create({
   macroObjectifsCont: {
-    backgroundColor: '#bbbbbb',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop : 150
+    paddingTop : 700
   },
   container: {
     backgroundColor: '#fff',
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
   item: {
     marginBottom: 10,
     padding: 10,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#ffffff',
     borderRadius: 5,
   },
 });
