@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     paddingTop : 700
   },
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 50
