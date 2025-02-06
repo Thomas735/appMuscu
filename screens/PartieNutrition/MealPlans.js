@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, FlatList, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet,  ScrollView } from "react-native";
 import { Card, Text, ProgressBar, Button } from "react-native-paper";
 import { PieChart } from "react-native-chart-kit";
 import { Dimensions } from "react-native";
@@ -24,10 +24,12 @@ const pieData = [
 
 const MealPlanScreen = () => {
   return (
+
+       <ScrollView style={styles.scrollView}>
     <View style={{ padding: 20 }}>
       {/* Macronutrient Progress */}
       <Card style={{ backgroundColor : "#ffffff", marginBottom: 20, padding: 15 }}>
-        <Text variant="titleLarge">Macros de la journée</Text>
+        <Text variant="titleLarge">Objectifs de la journée</Text>
         <Text>Calories: {consumedMacros.calories}/{totalMacros.calories}</Text>
         <ProgressBar style={styles.progressbars } progress={consumedMacros.calories / totalMacros.calories} color="skyblue" />
 
@@ -76,6 +78,9 @@ const MealPlanScreen = () => {
       {/* Add Meal Button */}
       <Button mode="contained" onPress={() => console.log("Add Meal")}>+ Add Meal</Button>
     </View>
+
+  </ScrollView>
+
   );
 };
 

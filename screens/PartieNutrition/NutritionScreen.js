@@ -1,34 +1,49 @@
 
 
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView,Dimensions} from 'react-native';
 
+import { useState } from 'react';
 import Index from "../../mesComposants/carousel.js"
 import MealPlanScreen from "./MealPlans.js"
 //Gérer l'écran de Nutrition
+import PropositionsPlats from "./PropositionsPlats.js"
+import { TabView, SceneMap } from 'react-native-tab-view';
+const renderScene = SceneMap({
+  first:  MealPlanScreen,
+  second: PropositionsPlats,
+});
+
+const routes = [
+  { key: 'first', title: 'Macros du Jour' },
+  { key: 'second', title: 'Plats' },
+];
+const layout = Dimensions.get('window');
 
 
 
 
-const NutritionScreen = () => (
 
-        <ScrollView style={styles.scrollView}>
-    <MealPlanScreen />
-    <View style={styles.container} onClick={() => console.log("onclick..") } >
-      <Text>Recettes de la semaine: </Text>
-    </View>
-      <View>
-      <Index/>
-    </View>  
 
-  </ScrollView>
+export default function NutritionScreen() {
+
+
+  const [index, setIndex] = useState(0);
+  return (
+  
+
+<TabView
+      navigationState={{ index, routes }}
+      renderScene={renderScene}
+      onIndexChange={setIndex}
+      initialLayout={{ width: layout.width }}
+    />
 );
+}
 
 
 
 
-
-export default NutritionScreen;
 
 
 const styles = StyleSheet.create({
