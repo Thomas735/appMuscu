@@ -35,7 +35,6 @@ export default function PropositionsPlatsScreen() {
 
 const styles = StyleSheet.create({
 scrollView: {
-    backgroundColor: 'beige',
   },
   macroObjectifsCont: {
     backgroundColor: '#ffffff',

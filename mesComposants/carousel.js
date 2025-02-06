@@ -24,7 +24,7 @@ function Index() {
                 height={width/1.5 }
                 autoPlay={true}
                 data={listeRecettes}
-                scrollAnimationDuration={1000}
+                scrollAnimationDuration={3000}
                 onSnapToItem={(index) => console.log('current index:', index)}
                 renderItem={({ index }) => (
                     <View

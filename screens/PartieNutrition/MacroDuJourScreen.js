@@ -37,7 +37,6 @@ export default function MacroDuJourScreen() {
 
 const styles = StyleSheet.create({
 scrollView: {
-    backgroundColor: 'beige',
   },
   macroObjectifsCont: {
     backgroundColor: '#ffffff',
