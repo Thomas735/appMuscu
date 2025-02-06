@@ -1,0 +1,54 @@
+commit 478ee39d10e60ce0f34048b2970aa78a4b43b24d[m ([m[1;36mHEAD[m -> [m[1;32mmain[m, [m[1;31morigin/main[m, [m[1;31morigin/HEAD[m)[m
+Author: Laytongentleman <lnmt21@protonmail.com>
+Date:   Sun Feb 2 02:10:44 2025 +0100
+
+    modif tailles
+
+commit 766b4f546437d8659e52d1a51686115f29489e5b[m
+Author: Laytongentleman <lnmt21@protonmail.com>
+Date:   Sun Feb 2 02:02:36 2025 +0100
+
+    raccourci @ et images dans le carousel
+
+commit a12ac5e4ccd1d9c1843f2978344ad88c5d2680be[m
+Author: Laytongentleman <lnmt21@protonmail.com>
+Date:   Sun Feb 2 01:29:52 2025 +0100
+
+    début de carousel pr nutrition
+
+commit 07fff9551738c4314e604b6376b3d11034b5b282[m
+Author: Niellen Thomas <t.niellen@orange.fr>
+Date:   Thu Jan 30 15:41:22 2025 +0100
+
+    Se focus sur la page changer de sport
+
+commit 4a310ce15989a43f8db7a94dc257dbe7c0e82137[m
+Author: Niellen Thomas <t.niellen@orange.fr>
+Date:   Thu Jan 30 01:35:56 2025 +0100
+
+    Erreur de navigation de la training page vers la page de choix du sport
+
+commit 2bbe583af5b6aa9ab15547726a2c321981973580[m
+Author: Niellen Thomas <t.niellen@orange.fr>
+Date:   Wed Jan 29 22:45:37 2025 +0100
+
+    Fusion du repo distant
+
+commit 3083fbad875104757bd209207a49938729ad2b78[m
+Merge: d1df7b9 ec43212
+Author: Niellen Thomas <t.niellen@orange.fr>
+Date:   Wed Jan 29 21:12:30 2025 +0100
+
+    Merge branch 'main' of https://github.com/Thomas735/appMuscu
+
+commit d1df7b9579387ee4ea3eb3da98ada9824f4eacaf[m
+Author: Niellen Thomas <t.niellen@orange.fr>
+Date:   Wed Jan 29 21:02:35 2025 +0100
+
+    Premier commit - Ajout du projet
+
+commit ec43212df85caf4278ece33e0567a077b5320a0d[m
+Author: Thomas735 <73957361+Thomas735@users.noreply.github.com>
+Date:   Wed Jan 29 18:32:16 2025 +0100
+
+    Initial commit

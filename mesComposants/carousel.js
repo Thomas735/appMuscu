@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 var listeRecettes = ["Smoothie protéiné", "Gateau protéiné", "barres de céréales", "Curry"]
 const images = [
-  require('@/assets/smoothie.png'),
-  require('@/assets/cake.png'),
-  require('@/assets/curry.png'),
-  require('@/assets/barresCer.png'),
+  require('../assets/smoothie.png'),
+  require('../assets/cake.png'),
+  require('../assets/curry.png'),
+  require('../assets/barresCer.png'),
 ]; 
 
 
