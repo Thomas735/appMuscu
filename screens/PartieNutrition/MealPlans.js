@@ -43,7 +43,7 @@ const MealPlanScreen = () => {
 
       {/* Macronutrient Pie Chart */}
       <Card style={{ backgroundColor : "#ffffff", marginBottom: 20, padding: 15 }}>
-        <Text variant="titleLarge">Macro Proportion</Text>
+        <Text variant="titleLarge">Proportions des Macros</Text>
         <PieChart
           data={pieData}
           width={screenWidth - 40}

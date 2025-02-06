@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
 import Index from "../../mesComposants/carousel.js"
 import MealPlanScreen from "./MealPlans.js"
@@ -11,15 +11,8 @@ import MealPlanScreen from "./MealPlans.js"
 
 
 const NutritionScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Cette page sera dédiée à la nutrition</Text>
-    <View style={styles.macroObjectifsCont} onClick={() => console.log("onclick..") } >
 
-      <Text>A supprimer , il faut juste décaler la position du view en dessous </Text>
-    </View>
-    <View style={styles.container} onClick={() => console.log("onclick..") } >
-      <Text>Objectifs de Macros:  </Text>
-    </View>
+        <ScrollView style={styles.scrollView}>
     <MealPlanScreen />
     <View style={styles.container} onClick={() => console.log("onclick..") } >
       <Text>Recettes de la semaine: </Text>
@@ -28,7 +21,7 @@ const NutritionScreen = () => (
       <Index/>
     </View>  
 
-  </View>
+  </ScrollView>
 );
 
 
@@ -39,11 +32,14 @@ export default NutritionScreen;
 
 
 const styles = StyleSheet.create({
+scrollView: {
+    backgroundColor: 'beige',
+  },
   macroObjectifsCont: {
     backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop : 700
+    paddingTop : 0
   },
   container: {
     backgroundColor: '#ffffff',
